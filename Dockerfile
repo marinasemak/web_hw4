@@ -23,8 +23,7 @@ RUN poetry config virtualenvs.create false && poetry install --only main
 # Оголошуємо порти
 # Flask
 EXPOSE 3000
-# socket server   
-EXPOSE 5001   
+
 
 # Запустимо наш застосунок всередині контейнера
 CMD ["python", "main.py"]
