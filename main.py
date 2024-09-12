@@ -20,7 +20,7 @@ def check_json_exists():
     if not os.path.exists("STORAGE_PATH"):
         STORAGE_DIR.mkdir(parents=True, exist_ok=True)
         with open(STORAGE_PATH, "w", encoding="utf-8") as file:
-            json.dump({}, file)
+            json.dump([], file)
         logging.debug("Storage is created")
 
 
@@ -73,7 +73,6 @@ def socket_client(ip, port, message):
 
 
 check_json_exists()
-
 
 @app.route("/")
 def index():
