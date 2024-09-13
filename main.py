@@ -10,7 +10,7 @@ import json
 import os
 
 app = Flask(__name__)
-HOST = "127.0.0.1"
+HOST = "0.0.0.0"
 UDP_PORT = 5001
 STORAGE_PATH = Path("storage/data.json")
 STORAGE_DIR = Path("storage")
@@ -73,6 +73,7 @@ def socket_client(ip, port, message):
 
 
 check_json_exists()
+
 
 @app.route("/")
 def index():
